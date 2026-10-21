@@ -20,7 +20,7 @@ with st.sidebar:
 
 st.title("✍️ Detección de Dígitos Escritos a Mano")
 st.markdown("**Modelo CNN entrenado en Google Colab con MNIST**")
-st.write("Practica como escribes números al escribirlos en el tablero, ¡revisa si son entendibles con esta página!")
+st.write("🔍 Practica como escribes números al escribirlos en el tablero, ¡revisa si son entendibles con esta página!")
 
 # Cargar modelo
 @st.cache_resource
