@@ -16,9 +16,11 @@ st.set_page_config(
 with st.sidebar:
     st.write(f"**TensorFlow:** {tf.__version__}")
     st.write(f"**Keras:** {keras.__version__}")
+    st.write("🎨 JVP")
 
 st.title("✍️ Detección de Dígitos Escritos a Mano")
 st.markdown("**Modelo CNN entrenado en Google Colab con MNIST**")
+st.write("Practica como escribes números al escribirlos en el tablero, ¡revisa si son entendibles con esta página!")
 
 # Cargar modelo
 @st.cache_resource
@@ -42,7 +44,7 @@ def load_mnist_model():
     # Si no se encuentra el modelo
     st.error("❌ No se encontró ningún modelo")
     st.info("""
-    **Instrucciones:**
+    **Instrucciones: ⚠️**
     1. Entrena el modelo en Google Colab
     2. Descarga `mnist_model.keras`
     3. Súbelo a la raíz de tu repositorio
@@ -64,15 +66,15 @@ with col1:
         stroke_width=20,
         stroke_color="white",
         background_color="black",
-        width=400,
-        height=400,
+        width=500,
+        height=500,
         drawing_mode="freedraw",
         key="canvas",
     )
 
 with col2:
     st.write("### 🎮 Controles")
-    predict_btn = st.button("🔍 **Predecir**", type="primary", use_container_width=True)
+    predict_btn = st.button("🔍 **Analizar**", type="primary", use_container_width=True)
     clear_btn = st.button("🗑️ Limpiar", use_container_width=True)
     
     if clear_btn:
